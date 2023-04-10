@@ -15,12 +15,18 @@
  * @return {number[]}
  */
 const twoSum = function (nums, target) {
+    // Create a Map
+    // A Map holds key-value pairs where the keys can be any datatype.
     const map = new Map();
+
+
     for (let i = 0; i < nums.length; i++) {
       const diff = target - nums[i];
       if (map.has(diff)) {
+        // Returns true if a key exists in a Map
         return [map.get(diff), i];
       }
+    //   Sets the value for a key in a Map
       map.set(nums[i], i);
     }
   };
