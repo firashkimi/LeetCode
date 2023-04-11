@@ -22,8 +22,8 @@ const twoSum = function (nums, target) {
 
     for (let i = 0; i < nums.length; i++) {
       const diff = target - nums[i];
+      // Returns true if a key exists in a Map
       if (map.has(diff)) {
-        // Returns true if a key exists in a Map
         return [map.get(diff), i];
       }
     //   Sets the value for a key in a Map
